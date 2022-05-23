@@ -58,7 +58,7 @@ array=(${DBS//,/ })
 for i in "${!array[@]}"; do
     db=${array[i]}
     echo "Generate schema: $db"
-    cmd="java -jar $APP_DIR/schemaspy-6.1.0.jar -dp $APP_DIR/postgresql-42.3.5.jar -imageformat png -norows -t pgsql -host $db_host -port $db_port -u $login -pfp -db $db -s public -o ${DST_DIR}/${db}_schema"
+    cmd="java -jar $APP_DIR/schemaspy-6.1.0.jar -dp $APP_DIR/postgresql-42.3.5.jar -imageformat png -norows -t pgsql -host $db_host -port $db_port -u $login -pfp -db $db -s public -rails -o ${DST_DIR}/${db}_schema"
 #    echo $cmd
     $cmd
 #    echo $pwd
